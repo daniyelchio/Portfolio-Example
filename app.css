@@ -2,12 +2,21 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0px;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +67,32 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(60deg, #3a3d41 0%, #181720 100%);
+}
+
+#welcome-section h1, h2{
+    text-align: center;
+    margin: 0.1em;
+    color: rgb(9, 198, 255);
+}
+
+#welcome-section h1{
+    color: rgb(255, 255, 255);
+}
+
+#welcome-section h2{
+    color: rgb(9, 198, 255);
+}
+
 
 @media (max-width: 500px){
 
