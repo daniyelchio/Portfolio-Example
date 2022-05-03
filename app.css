@@ -35,19 +35,41 @@ body {
     display: flex;
 }
 
-.navbar-links li {
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li:nth-child(1) {
     list-style: none;
+    background-color: #ffaea8;
+    width: 6em;
+    text-align: center;
+}
+.navbar-links li:nth-child(2) {
+    list-style: none;
+    background-color: #fff940;
+    width: 6em;
+    text-align: center;
+}
+.navbar-links li:nth-child(3) {
+    list-style: none;
+    background-color: #83ff77;
+    width: 6em;
+    text-align: center;
 }
 
 .navbar-links li a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 1rem;
     display: block;
+    font-size: 1.2em;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color: rgb(255, 255, 255);
 }
 
 .toggle-button {
@@ -76,7 +98,7 @@ body {
     height: 100vh; 
     width: 100%;
     background-color: whitesmoke;
-    background-image: linear-gradient(60deg, #3a3d41 0%, #181720 100%);
+    background-image: linear-gradient(69deg, #ffaea8 0%, #0c0c0c 100%);
 }
 
 #welcome-section h1, h2{
@@ -87,10 +109,40 @@ body {
 
 #welcome-section h1{
     color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
 }
 
 #welcome-section h2{
     color: rgb(9, 198, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(69deg, #fff940 0%, #464450 100%);
+}
+
+#projects h1 {
+    font-family: 'Orelega One';
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(69deg, #83ff77 0%, #464450 100%);
 }
 
 
