@@ -1,60 +1,231 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tapestry&family=Press+Start+2P&family=Orelega+One&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="app.css">
-</head>
+html{
+    height: 100%;
+}
 
-<body>
-    <nav class="navbar">
-        <div class="nav-name">Daniyel Cheah</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#welcome-section">Main</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+}
 
-    <section id="welcome-section">
+.navbar {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
 
-        <h1>Hello, I am Daniyel</h1>
-        <h2>a developer</h2>
-    </section>
+.nav-name {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
 
-    <section id="projects">
-        <h1>Some of my FCC Projects</h1>
-        <div class="projects-grid">
-            <a href="https://codepen.io/daniyelchio/pen/eYVObNV" target="_blank" rel="noreferrer noopener" class="project-tile"><p>JavaScript Async and Await</p></a>
-            <a href="https://codepen.io/daniyelchio/pen/GRyVeXK" target="_blank" rel="noreferrer noopener" class="project-tile"><p>Kaisen Keyboards</p></a>
-            <a href="https://codepen.io/daniyelchio/pen/WNdzQNM" target="_blank" rel="noreferrer noopener" class="project-tile"><p>Attack on Titan Survey</p></a>
-            <a href="https://codepen.io/daniyelchio/pen/RwxjLwR" target="_blank" rel="noreferrer noopener" class="project-tile"><p>Linus Torvalds</p></a>
-        </div>
-    </section>
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-    <section id="contact">
-        <h1>Contact me here</h1>
-        <div class="contact-list">
-            <a href="https://github.com/daniyelchio" id="profile-link" target="_blank" rel="noreferrer noopener">GitHub</a>
-            <a href="https://www.freecodecamp.org/daniyelchio" target="_blank" rel="noreferrer noopener">FreeCodeCamp</a>
-            <a href="mailto:daniyelkook@gmail.com" target="_blank" rel="noreferrer noopener">daniyelkook@gmail.com</a>
-            <a href="tel:123-456-7890" target="_blank" rel="noreferrer noopener">123-456-7890 (Fake)</a>
-        </div>
-    </section>
-</body>
-<script src="script.js"></script>
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-</html>
+.navbar-links li:nth-child(1) {
+    list-style: none;
+    background-color: #ffaea8;
+    width: 6em;
+    text-align: center;
+}
+.navbar-links li:nth-child(2) {
+    list-style: none;
+    background-color: #fff940;
+    width: 6em;
+    text-align: center;
+}
+.navbar-links li:nth-child(3) {
+    list-style: none;
+    background-color: #83ff77;
+    width: 6em;
+    text-align: center;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+    font-size: 1.2em;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(69deg, #ffaea8 0%, #0c0c0c 100%);
+}
+
+#welcome-section h1, h2{
+    text-align: center;
+    margin: 0.1em;
+    color: rgb(9, 198, 255);
+}
+
+#welcome-section h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
+}
+
+#welcome-section h2{
+    color: rgb(9, 198, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(69deg, #fff940 0%, #464450 100%);
+}
+
+#projects h1 {
+    font-family: 'Orelega One';  
+    font-size: 2em;
+}
+
+.projects-grid {
+    margin: 20px auto;
+    height: 400px;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.projects-grid a {
+    background-color: rgb(9, 198, 255);
+    padding:20px;
+    border-radius:10px;
+    color:rgb(255, 255, 255);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Tapestry';
+    font-size: 1.3em;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+    background-color: whitesmoke;
+    background-image: linear-gradient(69deg, #83ff77 0%, #464450 100%);
+}
+
+#contact h1 {
+    font-family: 'Orelega One';  
+    font-size: 2em;
+}
+
+.contact-list{
+    margin: 20px auto;
+    height: 200px;
+    width: 300px;
+    display:grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.contact-list a {
+    background-color: whitesmoke;
+    padding:20px;
+    border-radius: 5px;
+    color:rgb(0, 0, 0);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Tapestry'
+}
+
+@media (max-width: 500px){
+
+    .toggle-button {
+        display: flex;
+    }
+    
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;       
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
